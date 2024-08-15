@@ -1,0 +1,17 @@
+{
+    "name": "guizoxxv/laravel-json-lang",
+    "description": "A package to export Laravel language files as JSON.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Guizoxxv\\LaravelJsonLang\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gustavo Oliveira",
+            "email": "guizoxxv@gmail.com"
+        }
+    ],
+    "require": {}
+}
