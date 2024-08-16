@@ -13,5 +13,12 @@
             "email": "guizoxxv@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Guizoxxv\\LaravelJsonLang\\LaravelJsonLangServiceProvider"
+            ]
+        }
+    }
 }
