@@ -2,7 +2,7 @@
 
 namespace Guizoxxv\LaravelJsonLang;
 
-use ExportLanguageAsJsonCommand;
+use Guizoxxv\LaravelJsonLang\Console\ExportLanguageFilesAsJson;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
@@ -15,9 +15,7 @@ class LaravelJsonLangServiceProvider extends ServiceProvider implements Deferrab
      */
     public function register()
     {
-        $this->mergeConfigFrom(
-            __DIR__.'/../config/laravel-json-lang.php', 'laravel-json-lang'
-        );
+        //
     }
 
     /**
@@ -25,14 +23,18 @@ class LaravelJsonLangServiceProvider extends ServiceProvider implements Deferrab
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         if (! $this->app->runningInConsole()) {
             return;
         }
 
+        $this->publishes([
+            __DIR__.'/../config/laravel-json-lang.php' => config_path('laravel-json-lang.php'),
+        ]);
+
         $this->commands([
-            ExportLanguageAsJsonCommand::class,
+            ExportLanguageFilesAsJson::class,
         ]);
     }
 
@@ -43,6 +45,6 @@ class LaravelJsonLangServiceProvider extends ServiceProvider implements Deferrab
      */
     public function provides()
     {
-        return [ExportLanguageAsJsonCommand::class];
+        return [ExportLanguageFilesAsJson::class];
     }
 }
