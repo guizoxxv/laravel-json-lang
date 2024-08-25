@@ -28,7 +28,7 @@ The following configuration parameters are available:
 
 ### 1. input_paths
 
-An array of file system paths where the processing will take place. Each element in the array should be a string representing either a file path or a directory path. The path should be absolute, starting from the root of the application.
+An array of target file system paths to be processed. Each element in the array should be a string representing either a file path or a directory path. The path should be absolute, starting from the root of the application.
 
 Example:
 
@@ -66,7 +66,7 @@ If a key already exists in the JSON translation files, specifies whether to keep
 
 ### 4. languages
 
-An array (allowlist) of languages to be processed.
+An array (allowlist) of languages to be processed. When not provided, all available languages will be processed.
 
 ## Observations
 

@@ -116,7 +116,7 @@ class ExportLanguageFilesAsJson extends Command
         $lang = basename(dirname($path));
         $languages = config('laravel-json-lang.languages');
     
-        if ($languages === '*' || in_array($lang, $languages)) {
+        if (!isset($languages) || in_array($lang, $languages)) {
             if ($vendor_prefix) {
                 $this->files_per_language[$lang][$path] = $vendor_prefix;
             } else {
