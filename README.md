@@ -4,7 +4,7 @@ This package exports Laravel PHP translation files as JSON.
 
 ## How it works
 
-The `laravel-json-lang:export` command processes the input files by grouping them according to their respective languages. For each language, a job is dispatched to enable parallel processing. This job handles the files by reading each translation key and updating it or not, in a JSON translation file. The JSON translation keys are structured to ensure that the translation helper function works the same way as it would if the translations were coming from PHP files.
+This package adds a command that processes input files by grouping them according to their respective languages. For each language, a job is dispatched to enable parallel processing. This job handles the files by reading each translation key and updating it or not, in a JSON translation file. The JSON translation keys are structured to ensure that the translation helper function works the same way as it would if the translations were coming from PHP files.
 
 ## Installation
 
