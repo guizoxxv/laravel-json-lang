@@ -1,6 +1,6 @@
 # Laravel JSON Lang
 
-This package exports Laravel PHP translation files as JSON.
+A package to export Laravel PHP translation files as JSON.
 
 ## How it works
 

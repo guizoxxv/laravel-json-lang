@@ -12,16 +12,14 @@ class ExportLanguageFilesAsJson extends Command
      *
      * @var string
      */
-    protected $signature = 'laravel-lang-json:export';
+    protected $signature = 'laravel-json-lang:export';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
-
-    protected string $vendor_prefix;
+    protected $description = 'Exports target PHP translation files as JSON.';
 
     protected array $files_per_language;
    
